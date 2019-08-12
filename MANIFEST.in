@@ -1,0 +1,6 @@
+# example manifest document
+# this helps specify which folders and files to build into package on pip install
+
+# this will include everything in these folders
+graft example_package/tests
+graft example_package/data

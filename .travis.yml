@@ -1,0 +1,18 @@
+# this is a travis configuration file for Travis CI
+language: python
+python:
+  - "3.6"
+
+install:
+# prepare the environment by installing required packages
+  - pip install -r requirements.txt
+
+script:
+# run the setup script to install the package
+  - python setup.py install
+# run tests and get coverage report
+  - coverage run example_package/tests/test_all.py
+# generate coverage report in xml for upload
+  - coverage xml
+# upload coverage report to codacy
+  - python-codacy-coverage -r coverage.xml
