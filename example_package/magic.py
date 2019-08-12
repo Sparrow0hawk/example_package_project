@@ -1,5 +1,4 @@
 # an example class for our package
-import numpy as np
 import pandas as pd
 import pkg_resources
 
@@ -24,6 +23,7 @@ class Magic:
 
         return self.name +' is doing magic.'
 
+    @classmethod
     def get_heads(self):
 
         # example of retrieving resources from package data folders using pkg_resources

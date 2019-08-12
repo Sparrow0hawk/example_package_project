@@ -3,6 +3,7 @@
 
 import pandas as pd
 from example_package import magic
+import unittest
 
 class Test(unittest.TestCase):
 
